@@ -44,7 +44,7 @@ function Login() {
 
     <div class="login-div">
                 <div class="logo">
-                    <img src={logo} alt="Logo" /> </div>
+                    <img src={logo} alt="Logo" />  </div>
                    
         <label  htmlFor="login">Username:</label>
         <input
@@ -59,7 +59,7 @@ function Login() {
 <label className="tab" htmlFor="login-password">
     <br></br>
     <br></br>
-          Password: 
+            Password: 
         </label>
        
         <input
