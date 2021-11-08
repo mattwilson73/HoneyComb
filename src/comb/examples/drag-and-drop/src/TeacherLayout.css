@@ -1,31 +1,31 @@
-svg .tiles {
+svg .teacherTiles {
 
 }
 
-svg .tiles g {
-  fill: yellow;
+svg .teacherTiles g {
+  fill: red;
   fill-opacity: 0.6;
 }
-svg .tiles g:hover {
-  fill: orangered;
+svg .teacherTiles g:hover {
+  fill: red;
   fill-opacity: 0.7;
 }
-svg .tiles g:hover text {
+svg .teacherTiles g:hover text {
   fill-opacity: 1;
 }
 
-svg .tiles g polygon {
-  stroke: yellow;
+svg .teacherTiles g polygon {
+  stroke: red;
   stroke-width: 0.2;
   transition: fill-opacity .5s;
 }
-svg .tiles g text {
+svg .teacherTiles g text {
   font-size: 0.22em;
   fill: white;
   fill-opacity: 0.7;
   transition: fill-opacity .5s;
 }
-svg .tiles path {
+svg .teacherTiles path {
   fill: none;
   stroke: #19aac4;
   stroke-width: 0.2em;

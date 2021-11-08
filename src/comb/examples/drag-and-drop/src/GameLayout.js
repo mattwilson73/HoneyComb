@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { GridGenerator, Layout, Hexagon, Text, Pattern, HexUtils } from 'react-hexgrid';
 import './GameLayout.css';
+import TeacherLayout from './TeacherLayout';
 
 class GameLayout extends Component {
   constructor(props) {
     super(props);
     const hexagons = GridGenerator.hexagon(2);
     // Add custom prop to couple of hexagons to indicate them being blocked
-    hexagons[9].blocked = true;
     this.state = { hexagons };
   }
 

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { GridGenerator, Layout, Hexagon, Text, Pattern, HexUtils } from 'react-hexgrid';
-import './TilesLayout.css';
+import './TeacherLayout.css';
 
-class TilesLayout extends Component {
+class TeacherLayout extends Component {
   constructor(props) {
     super(props);
     // Initialize hexagons with some text and image
-    const hexagons = GridGenerator.parallelogram(-2, 0, 2, 4).map((hexagon, index) => {
+    const hexagons = GridGenerator.rectangle(2,1).map((hexagon, index) => {
       return Object.assign({}, hexagon, {
-        text: `Bee ${index+1}`,
-        image: `https://cdn.pixabay.com/photo/2021/01/14/18/19/bee-5917610_960_720.png`
+        text: `Queen ${index+1}`,
+        image: `https://media.istockphoto.com/vectors/cartoon-happy-bee-waving-hand-vector-id995810872`
       });
     })
     this.state = { hexagons };
@@ -40,7 +40,7 @@ class TilesLayout extends Component {
   render() {
     const { hexagons } = this.state;
     return (
-      <Layout className="tiles" size={{ x: 8, y: 8 }} flat={false} spacing={1.01} origin={{ x: 40, y: -20 }}>
+      <Layout className="teacherTiles" size={{ x: 8, y: 8 }} flat={false} spacing={1.01} origin={{ x: 40, y: -20 }}>
         {
           hexagons.map((hex, i) => (
             <Hexagon
@@ -63,6 +63,6 @@ class TilesLayout extends Component {
   }
 }
 
-export default TilesLayout;
+export default TeacherLayout;
 
 

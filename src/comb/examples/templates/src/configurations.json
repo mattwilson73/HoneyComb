@@ -31,6 +31,7 @@
     "map": "rectangle",
     "mapProps": [ 10, 10 ]
   },
+  
   "orientedRectangle": {
     "width": 1000,
     "height": 800,
