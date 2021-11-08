@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, withRouter } from "react-router-dom";
+import "../Honeycomb Login/Honeycomb Login/assets/css/style.css";
+import logo from "../Honeycomb Login/Honeycomb Login/assets/img/logo.png";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -33,33 +35,48 @@ function Login() {
     }
   }, [status]);
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="login">Username:</label>
-      <input
-        type="text"
-        value={username}
-        onChange={handleUsername}
-        name="login-username"
-        id="login-username"
-      />
-      <label className="tab" htmlFor="login-password">
-        Password:
-      </label>
-      <input
-        type="password"
-        value={password}
-        onChange={handlePassword}
-        name="login-password"
-        id="login-password"
-      />
-      <input
-        className="tab"
-        type="submit"
-        value="Login"
-        disabled={username.length === 0 || password.length === 0}
-      />
-      {status.status === "404" && <span style={{ color: 'red' }}>Invalid username or password</span>}
-    </form>
+    <><head>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans&family=Raleway&display=swap" rel="stylesheet"></link>
+    </head><form onSubmit={handleSubmit}>
+
+    <div class="login-div">
+                <div class="logo">
+                    <img src={logo} alt="Logo" /> </div>
+                   
+        <label  htmlFor="login">Username:</label>
+        <input
+        class = "username"
+          type="text"
+          value={username}
+          onChange={handleUsername}
+          name="login-username"
+          id="login-username" />
+
+
+<label className="tab" htmlFor="login-password">
+    <br></br>
+    <br></br>
+          Password: 
+        </label>
+       
+        <input
+         class = "password"
+          type="password"
+          value={password}
+          onChange={handlePassword}
+          name="login-password"
+          id="login-password"
+          />
+            <br></br>
+           
+           <button class="signin-btn">LOGIN</button>
+      
+        {status.status === "404" && <span style={{ color: 'red' }}>Invalid username or password</span>}
+        </div> </form> </>
+   
   );
 }
 
