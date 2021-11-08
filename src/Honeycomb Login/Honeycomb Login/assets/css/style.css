@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: #f0b14a;
+    background-color: rgb(59, 119, 250);
     
 }
 
@@ -31,7 +31,7 @@ body{
 }
 
 .logo img{
-    width:100%;
+    width:85%;
 }
 
 .title, .sub-title {
