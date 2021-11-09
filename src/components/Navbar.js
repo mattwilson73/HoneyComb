@@ -26,6 +26,7 @@ function Navbar() {
         <Link to="/honeycomb"> Honeycomb </Link>
         <Link to="/classlist"> Classlist </Link>
         <Link to="/calendar"> Calendar </Link>
+        <Link to="/quizgame"> Quiz </Link>
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>

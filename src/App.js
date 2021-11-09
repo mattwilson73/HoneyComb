@@ -6,6 +6,7 @@ import honeycomb from "./pages/honeycomb";
 import Classlist from "./pages/Classlist";
 import Calendar from "./pages/Calendar";
 import Login from "./pages/Login";
+import Quizgame from "./pages/Quizgame";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/classlist" exact component={Classlist} />
           <Route path="/calendar" exact component={Calendar} />
           <Route path="/" exact component={Login} />
+          <Route path="/Quizgame" exact component={Quizgame}/>
         </Switch>
         <Footer />
       </Router>
