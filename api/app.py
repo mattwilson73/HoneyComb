@@ -1,6 +1,6 @@
 ##dummy1@zug.edu
 ##password1
-
+import User
 import firebase_admin
 import pyrebase
 import json
@@ -12,6 +12,10 @@ app = Flask(__name__)
 cred = credentials.Certificate('honey_combAdmin.json')
 firebase = firebase_admin.initialize_app(cred)
 pb = pyrebase.initialize_app(json.load(open('config.json')))
+User_OBJ= None
+
+if __name__ == '__main__':
+      app.run(debug=True);
 
 firebaseConfig={ 'apiKey': "AIzaSyCU6PbIuZrZR8jJ1YKzHpPglPoWS1uCGjA",
   'authDomain': "honeycomb-12277.firebaseapp.com",
@@ -24,6 +28,8 @@ firebaseConfig={ 'apiKey': "AIzaSyCU6PbIuZrZR8jJ1YKzHpPglPoWS1uCGjA",
 
 firebase=pyrebase.initialize_app(firebaseConfig)
 auth=firebase.auth()
+storage=firebase.storage() ##file storage, quiz
+db= firebase.database() ##json User
 
 
 @app.route('/',methods= ['GET'])
@@ -37,10 +43,17 @@ def login():
         data = request.get_json()
         username = data['username']
         password = data['password']
-        print(username + '\n' + password)
+        ##print(username + '\n' + password)
         try:
           auth.sign_in_with_email_and_password(username, password)
+          
+         ## User_obj= db.child("Users").get()
+         ## for x in User_obj.each():
+           ##     if x.email == username:
+             ##          User = User(x.Status, x.Name, x.Email)
+          
           print("Succesfully logged in!")
+        ## print(user)
           return {"status": "200"}
         except:
           print("Invalid email or password. Try Again. ")
